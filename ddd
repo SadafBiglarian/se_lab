@@ -1,0 +1,74 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity tb_shift_register is
+end tb_shift_register;
+
+architecture behavior of tb_shift_register is
+    component shift_register
+        Port ( clk        : in  STD_LOGIC;
+               reset      : in  STD_LOGIC;
+               load       : in  STD_LOGIC;
+               shift_left : in  STD_LOGIC;
+               shift_right: in  STD_LOGIC;
+               rotate_left: in  STD_LOGIC;
+               parallel_in: in  STD_LOGIC_VECTOR (7 downto 0);
+               serial_in  : in  STD_LOGIC;
+               shift_out  : out STD_LOGIC_VECTOR (7 downto 0)
+             );
+    end component;
+
+    signal clk        : STD_LOGIC := '0';
+    signal reset      : STD_LOGIC := '0';
+    signal load       : STD_LOGIC := '0';
+    signal shift_left : STD_LOGIC := '0';
+    signal shift_right: STD_LOGIC := '0';
+    signal rotate_left: STD_LOGIC := '0';
+    signal parallel_in: STD_LOGIC_VECTOR (7 downto 0) := "00000000";
+    signal serial_in  : STD_LOGIC := '0';
+    signal shift_out  : STD_LOGIC_VECTOR (7 downto 0);
+
+begin
+    uut: shift_register
+        Port map ( clk => clk,
+                   reset => reset,
+                   load => load,
+                   shift_left => shift_left,
+                   shift_right => shift_right,
+                   rotate_left => rotate_left,
+                   parallel_in => parallel_in,
+                   serial_in => serial_in,
+                   shift_out => shift_out );
+
+    clk_process: process
+    begin
+        clk <= '0';
+        wait for 10 ns;
+        clk <= '1';
+        wait for 10 ns;
+    end process;
+
+    stimulus_process: process
+    begin
+        load <= '1';
+        parallel_in <= "10101010";
+        wait for 20 ns;
+        load <= '0';
+
+        shift_left <= '1';
+        serial_in <= '1';
+        wait for 20 ns;
+        shift_left <= '0';
+
+        shift_right <= '1';
+        serial_in <= '0';
+        wait for 20 ns;
+        shift_right <= '0';
+
+        rotate_left <= '1';
+        wait for 20 ns;
+        rotate_left <= '0';
+
+        wait;
+    end process;
+end behavior;
