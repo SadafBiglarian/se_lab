@@ -1,0 +1,157 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  background: #f3f4f6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  direction: rtl;
+}
+
+/* سایدبار */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  padding: 24px 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  min-height: 100vh;
+}
+
+.sidebarTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sidebarSection {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.sidebarSection ul {
+  padding-right: 18px;
+  margin: 0;
+}
+
+.sidebarSection a {
+  color: #ea3351;
+  text-decoration: none;
+}
+
+.sidebarSection a:hover {
+  text-decoration: underline;
+}
+
+/* محتوای اصلی */
+.contentArea {
+  flex: 1;
+  padding: 24px 32px;
+}
+
+/* هدر بالا */
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.headerText {
+  background: linear-gradient(135deg, #e772c0, #000e22);
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+}
+
+.headerText h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.headerText h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.headerText p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* باکس عکس پروفایل */
+.profileBox {
+  background: #9becde;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+/* سکشن‌ها */
+.section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.03);
+}
+
+.section h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.section p,
+.section li {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.section ul {
+  padding-right: 18px;
+  margin: 0;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    margin-bottom: 16px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+  }
+}
+
+.downloadBtn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+}
+
+.downloadBtn:hover {
+  opacity: 0.9;
+}
+
