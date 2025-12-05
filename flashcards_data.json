@@ -1,0 +1,88 @@
+{
+  "words": [
+    {
+      "word": "Hello",
+      "translation": "سلام",
+      "category": "Basics",
+      "known": true
+    },
+    {
+      "word": "Goodbye",
+      "translation": "خداحافظ",
+      "category": "Basics",
+      "known": false
+    },
+    {
+      "word": "Thank you",
+      "translation": "ممنون",
+      "category": "Basics",
+      "known": false
+    },
+    {
+      "word": "Please",
+      "translation": "لطفاً",
+      "category": "Basics",
+      "known": false
+    },
+    {
+      "word": "Water",
+      "translation": "آب",
+      "category": "Food",
+      "known": false
+    },
+    {
+      "word": "Bread",
+      "translation": "نان",
+      "category": "Food",
+      "known": false
+    },
+    {
+      "word": "Coffee",
+      "translation": "قهوه",
+      "category": "Food",
+      "known": false
+    },
+    {
+      "word": "Hotel",
+      "translation": "هتل",
+      "category": "Travel",
+      "known": false
+    },
+    {
+      "word": "Airport",
+      "translation": "فرودگاه",
+      "category": "Travel",
+      "known": false
+    },
+    {
+      "word": "One",
+      "translation": "یک",
+      "category": "Numbers",
+      "known": false
+    },
+    {
+      "word": "Two",
+      "translation": "دو",
+      "category": "Numbers",
+      "known": false
+    },
+    {
+      "word": "Buy",
+      "translation": "خریدن",
+      "category": "Basics",
+      "known": false
+    },
+    {
+      "word": "ffff",
+      "translation": "aaa",
+      "category": "Basics",
+      "known": false
+    }
+  ],
+  "meta": {
+    "last_activity_date": "2025-11-30",
+    "streak_days": 0,
+    "last_added_word": "ffff",
+    "last_added_translation": "aaa"
+  }
+}
